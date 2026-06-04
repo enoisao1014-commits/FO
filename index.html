@@ -1,23 +1,59 @@
 <html lang="ja">
-    <head>
-        <meta name="viewport" content="width=device-width,initial-scale=1.0">
-        <title>FO</title>
-        <style type="text/css">
+<head>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>FO</title>
+  <style type="text/css">
+    body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, object, iframe, pre, code, p, img, blockquote,
+    form, fieldset, legend, table, th, td, caption, tbody, tfoot, thead {
+      margin: 0;
+      padding: 0;
+    }
 
-body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, object, iframe, pre, code, p, img, blockquote,
-form, fieldset, legend, table, th, td, caption, tbody, tfoot, thead {
-	margin: 0;
-	padding: 0;
-	width:100%
-}
+    body {
+      background: #00000E;
+    }
 
-		</style>
-    </head>
-    <body bgcolor="#00000E">
-      <div align="center">
-  <a href="02.html">
-       <img src="01.png">
-	  </a>
-        </div>
-    </body>
+    .preview {
+      width: 100%;
+      text-align: center;
+    }
+
+    .preview img {
+      display: block;
+      width: 100%;
+      height: auto;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="preview">
+    <img id="mainImage" src="01.png" alt="FUSION OUTDOOR preview">
+  </div>
+
+  <script>
+    const images = [
+      "01.png",
+      "02.png",
+      "03.png",
+      "04.png",
+      "05.png"
+    ];
+
+    let currentIndex = 0;
+
+    const mainImage = document.getElementById("mainImage");
+
+    mainImage.addEventListener("click", function () {
+      currentIndex++;
+
+      if (currentIndex >= images.length) {
+        currentIndex = 0;
+      }
+
+      mainImage.src = images[currentIndex];
+    });
+  </script>
+</body>
 </html>
