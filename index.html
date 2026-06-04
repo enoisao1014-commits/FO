@@ -1,10 +1,41 @@
+<!DOCTYPE html>
 <html lang="ja">
 <head>
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <title>FO</title>
-  <style type="text/css">
-    body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, object, iframe, pre, code, p, img, blockquote,
-    form, fieldset, legend, table, th, td, caption, tbody, tfoot, thead {
+
+  <style>
+    body,
+    div,
+    dl,
+    dt,
+    dd,
+    ul,
+    ol,
+    li,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    object,
+    iframe,
+    pre,
+    code,
+    p,
+    img,
+    blockquote,
+    form,
+    fieldset,
+    legend,
+    table,
+    th,
+    td,
+    caption,
+    tbody,
+    tfoot,
+    thead {
       margin: 0;
       padding: 0;
     }
@@ -28,17 +59,18 @@
 </head>
 
 <body>
+
   <div class="preview">
-    <img id="mainImage" src="01.png" alt="FUSION OUTDOOR preview">
+    <img id="mainImage" src="01.png?v=20260604" alt="FUSION OUTDOOR preview">
   </div>
 
   <script>
     const images = [
-      "01.png",
-      "02.png",
-      "03.png",
-      "04.png",
-      "05.png"
+      "01.png?v=20260604",
+      "02.png?v=20260604",
+      "03.png?v=20260604",
+      "04.png?v=20260604",
+      "05.png?v=20260604"
     ];
 
     let currentIndex = 0;
@@ -51,10 +83,10 @@
       if (currentIndex >= images.length) {
         currentIndex = 0;
       }
-      <img src="images/hero.jpg?v=3">
 
       mainImage.src = images[currentIndex];
     });
   </script>
+
 </body>
 </html>
