@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>FO</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: #00000E;
+    }
+
+    .preview {
+      width: 100%;
+      text-align: center;
+    }
+
+    .preview img {
+      display: block;
+      width: 100%;
+      height: auto;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="preview">
+    <img id="mainImage" src="01_4.png" alt="FUSION OUTDOOR preview">
+  </div>
+
+  <script>
+    const images = [
+      "01_4.png",
+      "02_4.png",
+      "03_4.png",
+      "04_4.png",
+      "05_4.png"
+    ];
+
+    let currentIndex = 0;
+    const mainImage = document.getElementById("mainImage");
+
+    mainImage.addEventListener("click", function () {
+      currentIndex = (currentIndex + 1) % images.length;
+      mainImage.src = images[currentIndex];
+    });
+  </script>
+</body>
+</html>
