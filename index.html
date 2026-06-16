@@ -30,26 +30,41 @@
 
 <body>
   <div class="preview">
-    <img id="mainImage" src="01_8.png" alt="FUSION OUTDOOR preview">
+    <img id="mainImage" src="01_9.png" alt="FUSION OUTDOOR preview">
   </div>
 
   <script>
     const images = [
-      "01_8.png",
-      "02_8.png",
-      "03_8.png",
-      "04_8.png",
-      "05_8.png",
-      "06_8.png",
-      "06_8.png",
+      "01_9.png",
+      "02_9.png",
+      "03_9.png",
+      "04_9.png",
+      "05_9.png",
+      "06_9.png",
+      "07_9.png"
     ];
 
     let currentIndex = 0;
     const mainImage = document.getElementById("mainImage");
 
+    function scrollToTop() {
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: "auto"
+      });
+
+      // 念のため、ブラウザ差異対策
+      document.documentElement.scrollTop = 0;
+      document.body.scrollTop = 0;
+    }
+
     mainImage.addEventListener("click", function () {
       currentIndex = (currentIndex + 1) % images.length;
       mainImage.src = images[currentIndex];
+
+      // 画像切り替え後、ページ上部へ戻す
+      requestAnimationFrame(scrollToTop);
     });
   </script>
 </body>
